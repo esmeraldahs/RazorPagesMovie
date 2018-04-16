@@ -1,0 +1,25 @@
+﻿@page
+@model AboutModel
+@{
+    ViewData["Title"] = "About";
+    var swords = new List<string>()
+  {
+    "Katana",
+    "Ninjago",
+    "Ninja2"
+  };
+}
+
+<h2>@ViewData["Title"]</h2>
+<h3>Hello World!</h3>
+<h3>@Model.Message</h3>
+
+<p>Use this area to provide additional information.</p>
+<h4>Ninja's List</h4>
+<ul>
+    @foreach (var item in swords)
+    {
+        <li>@item</li>
+    }
+</ul>
+<a asp-page=".." class="btn btn-success">Ninja List</a>
